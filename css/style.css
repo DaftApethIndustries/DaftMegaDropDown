@@ -1,0 +1,98 @@
+
+/** CONTENTS - Mega drop down styling
+---------------------------------------- 
+
+	- Navigation
+		- Navigation Widths
+		- Mega menu / drop down
+
+
+*/
+
+
+/**** STRUCTURE ****/
+body {
+	margin: 0;
+}
+
+
+/**** HEADER ****/
+header { 
+	background-color: #ccc;
+	margin:0 auto;
+	width:960px;
+}
+
+
+
+/*** Navigation ***/
+header > nav { vertical-align: middle; }
+
+.looseMegaDropDown { 
+	display: inline; /* was inline-table */
+	float:left;
+	font-size:25px;
+	list-style:none;
+	margin-right:5px;
+	vertical-align:middle;
+	width:673px;
+}
+	.looseMegaDropDown > li {
+		display: inline;
+		float:left;
+		margin:0 0 0 5px;
+		position: relative;
+	}
+		.looseMegaDropDown > li > a {
+			background:blue;
+			color: #266bac;
+			display: table-cell;
+			min-height: 41px;
+			overflow: hidden;
+			padding: 0 7px;
+			text-align: center;
+			vertical-align: middle;
+			max-width: 145px;
+		}
+		.ie7 .looseMegaDropDown > li > a {
+			display:inline-block;
+			line-height: 1.2em;
+		}
+		.looseMegaDropDown > li > a.current {
+			color:green;
+		}
+		.looseMegaDropDown > li > a.jsActive {
+			color:green;
+		}
+		.looseMegaDropDown > li > a:hover,
+		.looseMegaDropDown > li > a:focus,
+		.looseMegaDropDown > li > a:active {
+			color:green;
+			text-decoration:none;
+		}
+
+		/** Mega menu / drop down**/
+		.megaMenu {
+			background:red;
+			display:none;
+			left:0;
+			margin:0;
+			padding-top: 5px;
+			position: absolute;
+			text-align:left;
+			top:100%;
+			width:200px;
+			z-index:1000;
+		}
+
+		.no-js .megaMenu {
+			display:block;
+			margin-top:3px;
+			position: relative;
+		}
+			.megaMenu a {
+				color:purple;
+				display: block;
+				padding:0 15px 5px;
+			}
+		
