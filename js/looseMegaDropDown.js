@@ -15,7 +15,7 @@
 				bKeepNavOpen : false,
 				sMenuLinkClass : 'menuLayerLink',
 				sMenuRightSideClass : 'menuRightClass',
-				sItemSelect : '.megaMenu',
+				sItemSelect : '.looseMegaMenu',
 				sLinkSelect : '> li > a',
 				sEventNamespace : '.mdd',
 				iDelayShow : 500,
@@ -143,8 +143,8 @@
 			_aMegaItems = _eMegaNav.find(oSettings.sItemSelect);
 
 			_eMegaNav
-				.on("mouseenter"+oSettings.sEventNamespace, "li:not(.megaList > li)", handleMegaNavMouseEnter)
-				.on("mouseleave"+oSettings.sEventNamespace, "li:not(.megaList > li)", handleMegaNavMouseLeave)
+				.on("mouseenter"+oSettings.sEventNamespace, "li:not("+oSettings.sItemSelect+" > li)", handleMegaNavMouseEnter)
+				.on("mouseleave"+oSettings.sEventNamespace, "li:not("+oSettings.sItemSelect+" > li)", handleMegaNavMouseLeave)
 				//keyboard events
 				.on("focus"+oSettings.sEventNamespace, "a", handleMegaNavFocus)
 				.on("blur"+oSettings.sEventNamespace, "a", handleMegaNavBlur);

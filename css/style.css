@@ -2,97 +2,119 @@
 /** CONTENTS - Mega drop down styling
 ---------------------------------------- 
 
-	- Navigation
-		- Navigation Widths
-		- Mega menu / drop down
+	- Page setup
+	- Plugin styles
+	- Visual styling
 
 
 */
 
 
-/**** STRUCTURE ****/
+/**** Page setup ****/
 body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 	margin: 0;
 }
-
-
-/**** HEADER ****/
 header { 
-	background-color: #ccc;
+	background: #fff url(../img/bg-header.gif) left bottom repeat-x;
+}
+
+nav { 
 	margin:0 auto;
 	width:960px;
 }
 
+a, a:visited {
+	color:#1E7EAE;
+	text-decoration: none;
+}
 
+/**** Plugin styles ****/
+.looseMegaDropDown > li {
+	position: relative;
+}
 
-/*** Navigation ***/
-header > nav { vertical-align: middle; }
+	/** Active state appied through js **/
+	.looseMegaDropDown a.jsActive {	}
 
-.looseMegaDropDown { 
+	/** internal mega menu styling**/
+	.looseMegaMenu {
+		display:none;
+		left:0;
+		margin:0;
+		position: absolute;
+		top:100%;
+		z-index:1000;
+	}
+
+	.menuRightClass .looseMegaMenu {
+		left:auto;
+		right:0;
+	}
+
+	.no-js .looseMegaMenu {
+		display:block;
+		margin-top:3px;
+		position: relative;
+	}
+		
+/**** visual styling ****/
+#primaryNav { 
 	display: inline; /* was inline-table */
 	float:left;
 	font-size:25px;
-	list-style:none;
 	margin-right:5px;
 	vertical-align:middle;
 	width:673px;
 }
-	.looseMegaDropDown > li {
+	#primaryNav > li {
 		display: inline;
 		float:left;
 		margin:0 0 0 5px;
-		position: relative;
 	}
-		.looseMegaDropDown > li > a {
-			background:blue;
-			color: #266bac;
+		#primaryNav > li > a {
+			color: ##1E7EAE;
 			display: table-cell;
-			min-height: 41px;
+			height: 80px;
+			min-width:80px;
+			max-width: 145px;
 			overflow: hidden;
 			padding: 0 7px;
 			text-align: center;
 			vertical-align: middle;
-			max-width: 145px;
 		}
-		.ie7 .looseMegaDropDown > li > a {
+		.ie7 #primaryNav > li > a {
 			display:inline-block;
 			line-height: 1.2em;
 		}
-		.looseMegaDropDown > li > a.current {
-			color:green;
+		#primaryNav > li > a.current {
+			color:#093888;
 		}
-		.looseMegaDropDown > li > a.jsActive {
-			color:green;
+		#primaryNav > li > a.jsActive {
+			color:#093888;
 		}
-		.looseMegaDropDown > li > a:hover,
-		.looseMegaDropDown > li > a:focus,
-		.looseMegaDropDown > li > a:active {
-			color:green;
+		#primaryNav > li > a:hover,
+		#primaryNav > li > a:focus,
+		#primaryNav > li > a:active {
+			color:#093888;
 			text-decoration:none;
 		}
 
-		/** Mega menu / drop down**/
-		.megaMenu {
-			background:red;
-			display:none;
-			left:0;
-			margin:0;
-			padding-top: 5px;
-			position: absolute;
+		/** internal mega menu styling**/
+		.looseMegaMenu {
+			font-size:12px;
+			padding-top: 5px 0 0;
 			text-align:left;
-			top:100%;
-			width:200px;
-			z-index:1000;
-		}
+			min-width:100px;
 
-		.no-js .megaMenu {
-			display:block;
-			margin-top:3px;
-			position: relative;
+			-moz-box-shadow: 2px 2px 4px 0px rgba(0,0,0, 0.23);
+			-webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0, 0.23);
+			box-shadow: 0 0 6px 0px rgba(0,0,0, 0.23);
 		}
-			.megaMenu a {
-				color:purple;
-				display: block;
-				padding:0 15px 5px;
+			.looseMegaMenu > ul {
+				display: inline-block;
 			}
-		
+			.looseMegaMenu a {
+				display:block;
+				padding:4px 15px;
+			}
