@@ -17,12 +17,32 @@ http://github.com/ryanand26/looseMegaDropDown
 
 ## Usage:
 
-1. Insert the necessary elements in your document, e.g.:
+1. Populate the HTML
+
+		<ul id="primaryNav" class="looseMegaDropDown">
+			<li>
+				<a href="#">One</a>
+
+				<ul class="looseMegaMenu">
+					<li><a href="#">MDD item</a></li>
+					<li><a href="#">MDD item</a></li>
+					<li><a href="#">MDD item</a></li>
+					<li><a href="#">MDD item</a></li>
+					<li><a href="#">MDD item</a></li>
+				</ul>
+			</li>
+
+			...
+
+		</ul>
+
+
+2. Insert the necessary elements in your document, e.g.:
    
 		<script src='/js/looseMegaDropDown.js'></script>
 
 
-2. Initialise the dropdown, e.g.:
+3. Initialise the dropdown, e.g.:
 
 		<script type='text/javascript'>
 			$(document).ready(function() {
@@ -30,7 +50,9 @@ http://github.com/ryanand26/looseMegaDropDown
 			});
 		</script>
 
-3. Options (The intial characters are because the variable names use a simplified version of Hungarian notation).
+## Options:
+
+(The intial characters are because the variable names use a simplified version of Hungarian notation).
 
 	+ sActiveClass - Class to use on an active primary item. Default: 'jsActive'.
 	+ sMenuLinkClass - Class added to each mega-nav item. Default: 'menuLayerLink'.
