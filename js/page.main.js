@@ -21,7 +21,7 @@
 			if (ePrimaryNavigation.length > 0) {
 				oSettings = {};
 				
-				ePrimaryNavigation.looseMegaDropDown();
+				ePrimaryNavigation.daftMegaDropDown();
 			}
 
 		};

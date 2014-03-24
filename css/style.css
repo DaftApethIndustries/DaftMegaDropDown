@@ -30,15 +30,15 @@ a, a:visited {
 }
 
 /**** Plugin styles ****/
-.looseMegaDropDown > li {
+.daftMegaDropDown > li {
 	position: relative;
 }
 
 	/** Active state appied through js **/
-	.looseMegaDropDown a.jsActive {	}
+	.daftMegaDropDown a.jsActive {	}
 
 	/** internal mega menu styling**/
-	.looseMegaMenu {
+	.daftMegaMenu {
 		display:none;
 		left:0;
 		margin:0;
@@ -47,12 +47,12 @@ a, a:visited {
 		z-index:1000;
 	}
 
-	.menuRightClass .looseMegaMenu {
+	.menuRightClass .daftMegaMenu {
 		left:auto;
 		right:0;
 	}
 
-	.no-js .looseMegaMenu {
+	.no-js .daftMegaMenu {
 		display:block;
 		margin-top:3px;
 		position: relative;
@@ -73,7 +73,7 @@ a, a:visited {
 		margin:0 0 0 5px;
 	}
 		#primaryNav > li > a {
-			color: ##1E7EAE;
+			color: #1E7EAE;
 			display: table-cell;
 			height: 80px;
 			min-width:80px;
@@ -101,7 +101,7 @@ a, a:visited {
 		}
 
 		/** internal mega menu styling**/
-		.looseMegaMenu {
+		.daftMegaMenu {
 			font-size:12px;
 			padding-top: 5px 0 0;
 			text-align:left;
@@ -111,10 +111,10 @@ a, a:visited {
 			-webkit-box-shadow: 2px 2px 4px 0px rgba(0,0,0, 0.23);
 			box-shadow: 0 0 6px 0px rgba(0,0,0, 0.23);
 		}
-			.looseMegaMenu > ul {
+			.daftMegaMenu > ul {
 				display: inline-block;
 			}
-			.looseMegaMenu a {
+			.daftMegaMenu a {
 				display:block;
 				padding:4px 15px;
 			}

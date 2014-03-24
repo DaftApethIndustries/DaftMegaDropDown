@@ -1,21 +1,21 @@
 /*jslint evil: false, jquery:true, forin: true, white: false, devel:true */
 /*!
- * Loose Mega Drop Down plugin
- * Author: ryanand26 (2012) (http://www.looseideas.co.uk)
+ * Daft Mega Drop Down plugin
+ * Author: ryanand26 (2012) (http://www.daftapeth.co.uk)
  * @version 1.0
 **/
 
-(function( window, $, undefined ) {
+(function (window, $, undefined) {
 	"use strict";
 
-	$.fn.looseMegaDropDown = function(oOptions) {
+	$.fn.daftMegaDropDown = function (oOptions) {
 
 		var oDefaults = {
 				sActiveClass : 'jsActive',
 				bKeepNavOpen : false,
 				sMenuLinkClass : 'menuLayerLink',
 				sMenuRightSideClass : 'menuRightClass',
-				sItemSelect : '.looseMegaMenu',
+				sItemSelect : '.daftMegaMenu',
 				sLinkSelect : '> li > a',
 				sEventNamespace : '.mdd',
 				iDelayShow : 500,
@@ -26,7 +26,7 @@
 		/**
 		* Mega drop down object
 		*/
-		var MegaDropDown = function(eMegaNav) {
+		var MegaDropDown = function (eMegaNav) {
 			var _eMegaNav = null,
 				_aMegaNavLinks = [],
 				_aMegaItems = [],
@@ -42,7 +42,7 @@
 				var iLen = aMegaNavLinks.length,
 					iMidPoint = Math.floor(iLen / 2);
 				
-				aMegaNavLinks.each(function (i,e) {
+				aMegaNavLinks.each(function (i, e) {
 					//add the link class, used to speed up show and hides
 					var eLink = $(e).addClass(oSettings.sMenuLinkClass);
 					//if past the mid point add the class
@@ -57,7 +57,7 @@
 			/**
 			* Show the mega items passed in, resets the display first
 			*/
-			var showMegaNav = function(eThis, aMegaItem) {
+			var showMegaNav = function (eThis, aMegaItem) {
 				clearTimeout(iTimeoutForHide);
 
 				_aMegaNavLinks.removeClass(oSettings.sActiveClass);
@@ -70,7 +70,7 @@
 			/**
 			* Hide all mega items and reset the active nav tab
 			*/
-			var hideMegaNav = function() {
+			var hideMegaNav = function () {
 				clearTimeout(iTimeoutForShow);
 
 				_aMegaItems.stop(true,true).hide();
@@ -83,7 +83,7 @@
 			/**
 			* Called by mouseenter event
 			*/
-			var handleMegaNavMouseEnter = function(event) {
+			var handleMegaNavMouseEnter = function (event) {
 				clearTimeout(iTimeoutForHide);
 				
 				var that = this,
@@ -105,7 +105,7 @@
 			/**
 			* Called by mouseleave event
 			*/
-			var handleMegaNavMouseLeave = function(event) {
+			var handleMegaNavMouseLeave = function (event) {
 				clearTimeout(iTimeoutForShow);
 				iTimeoutForHide = setTimeout(hideMegaNav, oSettings.iDelayHide);
 			};
@@ -113,7 +113,7 @@
 			/**
 			* Show the mega items passed in, resets the display first
 			*/
-			var handleMegaNavFocus = function(event) {
+			var handleMegaNavFocus = function (event) {
 				var $this = $(this);
 
 				//stop the focus out events action from taking place
@@ -129,7 +129,7 @@
 			/**
 			* Called by blur event
 			*/
-			var handleMegaNavBlur = function(event) {
+			var handleMegaNavBlur = function (event) {
 				clearTimeout(iTimeoutForBlur);
 				iTimeoutForBlur = setTimeout(hideMegaNav, oSettings.iDelayHide);
 			};
@@ -138,22 +138,22 @@
 			* Init the object
 			*/
 			_eMegaNav = $(eMegaNav);
-			_aMegaNavLinks = initNavLinks( _eMegaNav.find(oSettings.sLinkSelect) );
+			_aMegaNavLinks = initNavLinks(_eMegaNav.find(oSettings.sLinkSelect));
 								
 			_aMegaItems = _eMegaNav.find(oSettings.sItemSelect);
 
 			_eMegaNav
-				.on("mouseenter"+oSettings.sEventNamespace, "li:not("+oSettings.sItemSelect+" > li)", handleMegaNavMouseEnter)
-				.on("mouseleave"+oSettings.sEventNamespace, "li:not("+oSettings.sItemSelect+" > li)", handleMegaNavMouseLeave)
+				.on("mouseenter" + oSettings.sEventNamespace, "li:not(" + oSettings.sItemSelect + " > li)", handleMegaNavMouseEnter)
+				.on("mouseleave" + oSettings.sEventNamespace, "li:not(" + oSettings.sItemSelect + " > li)", handleMegaNavMouseLeave)
 				//keyboard events
-				.on("focus"+oSettings.sEventNamespace, "a", handleMegaNavFocus)
-				.on("blur"+oSettings.sEventNamespace, "a", handleMegaNavBlur);
+				.on("focus" + oSettings.sEventNamespace, "a", handleMegaNavFocus)
+				.on("blur" + oSettings.sEventNamespace, "a", handleMegaNavBlur);
 
 			return this;
 		};
 	
 
-		return this.each(function() {
+		return this.each(function () {
 			new MegaDropDown(this);
 		});
 	};

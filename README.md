@@ -1,29 +1,29 @@
-# looseMegaDropDown
+# daftMegaDropDown
 
 Implentation of a 'Mega dropdown' with the JS written as a plugin for jQuery.
 
-(c) 2012 Ryan Mitchell (rmitchell@sapient.com)
+(c) 2012 Daft Apeth Industries (enquiries@daftapeth.co.uk)
 
 Released under The MIT License.
 
 ## Description:
 
-looseMegaDropDown is a jQuery plugin to create a mega dropdown that has keyboard support.
+daftMegaDropDown is a jQuery plugin to create a mega dropdown that has keyboard support.
 
 
 ## Homepage:
 
-http://github.com/ryanand26/looseMegaDropDown
+http://github.com/ryanand26/daftMegaDropDown
 
 ## Usage:
 
 1. Populate the HTML
 
-		<ul id="primaryNav" class="looseMegaDropDown">
+		<ul id="primaryNav" class="daftMegaDropDown">
 			<li>
 				<a href="#">One</a>
 
-				<ul class="looseMegaMenu">
+				<ul class="daftMegaMenu">
 					<li><a href="#">MDD item</a></li>
 					<li><a href="#">MDD item</a></li>
 					<li><a href="#">MDD item</a></li>
@@ -39,14 +39,14 @@ http://github.com/ryanand26/looseMegaDropDown
 
 2. Insert the necessary elements in your document, e.g.:
    
-		<script src='/js/looseMegaDropDown.js'></script>
+		<script src='/js/daftMegaDropDown.js'></script>
 
 
 3. Initialise the dropdown, e.g.:
 
 		<script type='text/javascript'>
 			$(document).ready(function() {
-				$('#primary-navigation').looseMegaDropDown();
+				$('#primary-navigation').daftMegaDropDown();
 			});
 		</script>
 
@@ -57,7 +57,7 @@ http://github.com/ryanand26/looseMegaDropDown
 	+ sActiveClass - Class to use on an active primary item. Default: 'jsActive'.
 	+ sMenuLinkClass - Class added to each mega-nav item. Default: 'menuLayerLink'.
 	+ sMenuRightSideClass - Class add when the dropdown is in the second half of the menu. Default: 'menuRightClass'.
-	+ sItemSelect - Select for child items (lists to show). Default: '.looseMegaMenu'.
+	+ sItemSelect - Select for child items (lists to show). Default: '.daftMegaMenu'.
 	+ sLinkSelect - Select for primary items (show the child items on hover and focus). Default: '> li > a'.
 	+ sEventNamespace - Namespace added to all bound events. Default: '.mdd'.
 	+ iDelayShow - Show speed. Default: 500.
